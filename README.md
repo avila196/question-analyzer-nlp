@@ -13,7 +13,7 @@ As an overview, there are two main datasets:
 * Stack Overflow: This dataset can weigh up to 80 gb when unzipped. This is a very tech-specific dataset used for CS related questions.
 * English: This dataset contains all english language related questions. Its weight is about 460 mb when unzipped.
 
-The files are mainly Python files (.py), iPython notebook files (.ipynb) and text files with some special format (.xml or .txt)-
+The files are mainly Python files (.py), iPython notebook files (.ipynb) and text files with some special format (.xml or .txt).
 
 ## Step-by-step running process
 In order to run the model, clone the whole github repository and make the code download the needed dataset files. Then, run files in the next order:
@@ -22,3 +22,10 @@ In order to run the model, clone the whole github repository and make the code d
 
 ## Deployment
 The deployment of the model is summarized to be deployed on a Docker container. The folder "api_server" has the *Dockerfile* needed to create the image. Once the image is running, go to localhost:5000/apidocs in order to check the API endpoints that run the model
+
+## Sample Executions
+The current API has two different endpoints to interact with the model:
+1. Only question: the program considers the question and analyzes it with default year as 2018 and no tags.
+![](poc/endpoint1.gif)
+2. Question, year and tags: the program considers the question year and tags to provide the final score and feedback.
+![](poc/endpoint2.gif)

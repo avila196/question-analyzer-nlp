@@ -2,3 +2,4 @@ raw_dataset/
 processed_files/
 glove_model.pkl
 api/app/nnlm-en-dim128_2
+.DS_Store
